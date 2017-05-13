@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>BusTickets</title>
+        <link rel="stylesheet" href="%PATH%/theme.css" />
+        <link rel="stylesheet" type="text/css" href="%PATH%/font-awesome.css" />
+        <link rel="stylesheet" href="%PATH%/jquery-ui.css" />
+        <link rel="stylesheet" href="%PATH%/primeui.min.css" />
+        <script type="text/javascript" src="%PATH%/jquery.js"></script>
+        <script type="text/javascript" src="%PATH%/jquery-ui.js"></script>
+        <script type="text/javascript" src="%PATH%/primeui.min.js"></script>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:menubar>
+                <p:menuitem value="BusTickets"></p:menuitem>
+                <p:menuitem value="Minha Conta" icon="fa fa-user-o" style="font-size: 0.8em"></p:menuitem>
+                <p:menuitem value="Sair" icon="fa fa-sign-out" style="font-size: 0.8em"></p:menuitem>
+            </p:menubar>
+            <h1><h:outputText value="BusTickets"/></h1>
+
+            <p:dataTable var="viagem" value="#{reservaMBean.viagens}">
+               <p:column headerText="Origem">
+                  <h:outputText value="#{viagem.origem}" />
+               </p:column>
+               <p:column headerText="Destino">
+                  <h:outputText value="#{viagem.destino}" /> 
+               </p:column>
+               <p:column headerText="Dia">
+                   <h:outputText value="" />
+               </p:column>
+               <p:column headerText="Hora">
+                   <h:outputText value="" />
+               </p:column>
+               <p:column headerText="Valor">
+                   <h:outputText value="" />
+               </p:column>
+               <p:column headerText="Comprar">
+                  <p:commandButton value="Comprar" action="#{reservaMBean.comprar}"></p:commandButton>
+               </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

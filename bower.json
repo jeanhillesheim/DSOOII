@@ -1,0 +1,20 @@
+{
+  "name": "bower",
+  "authors": [
+    "Hillesheim <jfernandohillesheim@luc.edu>"
+  ],
+  "description": "bower file",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "primeui": "^4.1.15"
+  }
+}
